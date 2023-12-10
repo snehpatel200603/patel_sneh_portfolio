@@ -1,0 +1,47 @@
+// styles.scss
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .case-study {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  
+    h2 {
+      color: #4caf50;
+      margin-top: 20px;
+    }
+  
+    p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+  
+    .case-study-image {
+      margin-top: 20px;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .main-content {
+      padding: 10px;
+    }
+  
+    .case-study {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
