@@ -1,0 +1,22 @@
+:root {
+  --plyr-color-main: rgb(98, 29, 224);
+  --plyr-control-icon-size: 30px;
+  --plyr-control-radius: 40px;
+  --plyr-font-family: "Helvetica Neue", sans-serif, Helvetica;
+  --plyr-control-spacing: 15px;
+}
+
+.title h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.video-player{
+    padding-bottom: 50px;
+}
