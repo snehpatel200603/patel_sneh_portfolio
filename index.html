@@ -9,10 +9,18 @@
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script async src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script defer src="js/main.js"></script>
+<script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+    ></script>
+    <script defer type="module" src="js/script.js"></script>
+<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+    <script type="module" defer src="js/main.js"></script>
   </head>
   <body>
     <!-- This is the header of the page -->
@@ -150,7 +158,7 @@
       </section>
 
       <!-- Projects -->
-      <section class="grid-con projects">
+      <section class="grid-con projects" id="project">
         <div
           class="col-span-full m-col-span-full l-col-span-full xl-col-span-full project-title"
         >
@@ -158,7 +166,7 @@
         </div>
 
         <a
-          href="path/to/project-detail"
+          href="project-details.html"
           class="col-span-full m-col-span-4 l-col-span-4 xl-col-span-4 project-card-link"
         >
           <div class="project-card">
@@ -174,7 +182,7 @@
         </a>
 
         <a
-          href="path/to/project-detail"
+          href="project-details-2.html"
           class="col-span-full m-col-span-4 l-col-span-4 xl-col-span-4 project-card-link"
         >
           <div class="project-card">
@@ -189,7 +197,7 @@
           </div>
         </a>
         <a
-          href="path/to/project-detail"
+          href="project-details-3.html"
           class="col-span-full m-col-span-4 l-col-span-4 xl-col-span-4 project-card-link"
         >
           <div class="project-card">

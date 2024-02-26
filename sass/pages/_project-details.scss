@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as v;
+
+.project-details {
+  background-color: black;
+  color: v.$color-primary;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-title {
+    color: v.$color-accent;
+    margin-bottom: 20px;
+    font-size: 2.5rem; // Keeping the increased font size for the title
+    // Removing the overflow, white-space, border-right, width, and animation properties
+  }
+
+  .live-project-btn {
+    background-color: v.$color-accent;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: background-color 0.3s, color 0.3s;
+    // Removed the animation property for moving left
+
+    &:hover {
+      background-color: darken(v.$color-accent, 10%);
+      color: v.$color-primary;
+    }
+  }
+
+  .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid v.$border-color;
+    border-radius: 10px;
+    padding: 15px;
+
+    &:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .project-image {
+      width: 45%;
+      border-radius: 5px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .project-description {
+      width: 45%;
+      color: v.$color-primary;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
+
+// Mobile adjustments
+@media (max-width: #{v.$max-width-mobile}) {
+  .project-details .project-item {
+    flex-direction: column !important; // Stack items vertically on mobile
+
+    .project-image,
+    .project-description {
+      width: 100%; // Use full container width for both elements
+    }
+  }
+}
