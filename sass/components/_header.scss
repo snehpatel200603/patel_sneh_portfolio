@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
 
 // SCSS Variables
 $primary-color: rgb(255, 255, 255); // Dark color for modern look
-$secondary-color: rgb(124, 9, 255); // White color for contrast
-$background-color: #00000029; // Light background color
-$hover-color: #5052ff; // Bright color for hover effects
+$secondary-color: #ff6818; // White color for contrast
+$background-color: #ffffff00; // Light background color
+$hover-color: #ff6818; // Bright color for hover effects
 $transition-time: 0.3s; // Time for transition effects
 
 // General Style
@@ -52,18 +51,17 @@ $transition-time: 0.3s; // Time for transition effects
   .navbar {
     grid-column: 4 / -1;
     justify-self: end;
+    width: 100%;
 
     .nav-list {
-      display: grid;
-      grid-auto-flow: column;
-      gap: 2rem; // Space between navigation items
+      display: flex;
+      justify-content: space-between; // Space between navigation items
       align-items: center;
       list-style-type: none;
 
       .nav-item {
         color: $primary-color;
         text-decoration: none;
-        padding: 0.5rem 1rem;
         transition: color $transition-time, transform $transition-time;
 
         &:hover {
@@ -93,6 +91,7 @@ $transition-time: 0.3s; // Time for transition effects
       padding: 0.75rem 1rem;
       display: block;
       transition: background-color $transition-time;
+      width: 100%;
 
       &:hover {
         background-color: $hover-color;
@@ -112,6 +111,7 @@ $transition-time: 0.3s; // Time for transition effects
     .navbar,
     .navbar-mobile {
       grid-column: 1 / -1;
+      width: 100%;
     }
   }
 }
