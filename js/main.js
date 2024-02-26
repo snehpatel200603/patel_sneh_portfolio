@@ -1,18 +1,6 @@
-(() => {
-  function toggleMobileNav() {
-    var navbarMobile = document.querySelector("#navbar-mobile");
-    var hamburgerIcon = document.querySelector("#hamburger-icon");
-    navbarMobile.classList.toggle("active");
-    hamburgerIcon.classList.toggle("active");
-  }
+import { hamburger } from "./modules/hamburger.js";
 
-  var hamburger = document.querySelector(".hamburger");
-  var navMobile = document.querySelector(".navbar-mobile");
-
-  hamburger.addEventListener("click", function () {
-    this.classList.toggle("active");
-    navMobile.classList.toggle("active");
-  });
+hamburger();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -29,4 +17,3 @@
   });
 
   const player = new Plyr("video");
-})();
