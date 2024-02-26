@@ -2,6 +2,10 @@
 
 ## Introduction
 
+# my website : https://www.patelsneh.com
+
+i added the responsive designe and also made the whole new version for more updates also visit https://www.patelsneh.com and you cna also conntact me form there
+
 Welcome to my GitHub portfolio! I'm Sneh Patel, a front-end developer with a passion for web development. While I don't have specific projects to showcase at the moment, I'm eager to learn and collaborate on exciting projects.
 
 ## Skills
