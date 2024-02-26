@@ -1,3 +1,4 @@
+
 import { Reveal } from "./modules/reveal.js";
 import { contactForm } from "./modules/contact-form.js";
 import { scrollTrigger } from "./modules/scroll-trigger.js";
@@ -10,3 +11,4 @@ if (document.body.dataset.page === "home") {
 }
 
 const player = new Plyr("video");
+
