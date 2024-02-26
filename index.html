@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PATEL SNEH</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
-    <link href="css/grid.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-<script
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneh Patel</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
     ></script>
@@ -17,19 +18,16 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
     ></script>
-    <script defer type="module" src="js/script.js"></script>
+    <!-- Your custom script file -->
+    <script defer type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
 <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
 
-    <script type="module" defer src="js/main.js"></script>
   </head>
-  <body>
-    <!-- This is the header of the page -->
-  <header class="grid-con header">
-      <h1 class="hidden">Header with logo and navigation bar</h1>
-      <div class="col-span-3 m-col-span-1 l-col-span-1 logo"><img src="img/main-logo.png" alt="logo"></div>
-
-
-
+  <body data-page="home">
+    <!-- Header -->
+   <header class="grid-con header">
+      <div class="col-span-3 m-col-span-1 l-col-span-1 logo"><img src="img/logo-white.svg"></div>
 
       <!-- hamburger icon -->
       <div class="hamburger" id="hamburger-icon">
@@ -61,9 +59,13 @@
       </nav>
     </header>
 
-    <!-- this is the main sections where all the content goes for the page  -->
+    <!-- <div class="reveal">
+   <div class="content">
+     <p class="para" >this is Sneh Patel</p>
+   </div>
+   <div class="overlay"></div>
+ </div> -->
     <main>
-
       <!-- Main Header  -->
       <section class="grid-con" id="home">
         <div
@@ -114,8 +116,7 @@
         </div>
       </section>
 
-      <!-- this is the section for the about me  -->
- <!-- Skills -->
+      <!-- Skills -->
       <section class="skills-section">
         <h2>My Skills</h2>
         <div class="skills-container">
@@ -162,7 +163,7 @@
       </section>
 
       <!-- Projects -->
-      <section class="grid-con projects" id="project">
+      <section class="grid-con projects">
         <div
           class="col-span-full m-col-span-full l-col-span-full xl-col-span-full project-title"
         >
@@ -175,7 +176,7 @@
         >
           <div class="project-card">
             <img
-              src="img/project-pics/image1a.png"
+              src="img/project-pics/project1_thumb.png"
               alt="Project 1"
             />
             <div class="overlay-content">
@@ -191,7 +192,7 @@
         >
           <div class="project-card">
             <img
-              src="img/project-pics/image2a.png"
+              src="img/project-pics/project2_thumb.png"
               alt="Project 1"
             />
             <div class="overlay-content">
@@ -206,7 +207,7 @@
         >
           <div class="project-card">
             <img
-              src="img/project-pics/image3a.png"
+              src="img/project-pics/project3_thumb.png"
               alt="Project 1"
             />
             <div class="overlay-content">
@@ -250,11 +251,6 @@
           </section>
         </div>
       </section>
-      </main>
-    <!-- Rest of your HTML content goes here -->
+    </main>
   </body>
 </html>
-  
-</body>
-</html>
-

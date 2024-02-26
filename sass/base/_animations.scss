@@ -1,0 +1,38 @@
+// Define your brand color variable using SCSS syntax
+$brand: #ff6818; 
+
+// Utilize SCSS variables for broader use within :root for CSS custom properties
+:root {
+  --brand: #{$brand}; // SCSS variable inside a custom property
+}
+
+// Triangle styling
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid $brand; // Direct use of SCSS variable
+}
+
+// Overlay styling
+.overlay {
+  background-color: var(--brand); // Using CSS custom property for consistency
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; // Ensure it stretches across the container
+  height: 100%; // Cover the entire height of the parent
+  z-index: 20; // Make sure this is above the .content but below the clickable elements
+}
+
+// Reveal and content styling
+.reveal {
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.para{
+  font-weight: bold;
+}
