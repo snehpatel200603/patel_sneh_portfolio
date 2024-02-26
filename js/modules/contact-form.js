@@ -50,7 +50,7 @@ export function contactForm() {
         feedBack.innerHTML = "";
         const messageElement = document.createElement("p");
         messageElement.textContent =
-          "sorry,you must be using an older browser, that does not support AJAX";
+          "Come on man get a new computer !! just kidding the form is not working";
       });
   }
 
