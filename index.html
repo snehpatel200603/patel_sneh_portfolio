@@ -43,6 +43,201 @@
         <a class="nav-item" href="#contact">Contact</a>
       </nav>
     </header>
+
+    <!-- this is the main sections where all the content goes for the page  -->
+    <main>
+
+      <!-- Main Header  -->
+      <section class="grid-con" id="home">
+        <div
+          class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6 text-heading"
+        >
+          <div class="reveal">
+            <div class="content main-title">
+              <h1>HI! There</h1>
+            </div>
+            <div class="overlay"></div>
+          </div>
+
+          <div class="reveal">
+            <div class="content main-title">
+              <h1>I Am Sneh Patel</h1>
+            </div>
+            <div class="overlay"></div>
+          </div>
+
+          <div class="reveal">
+            <div class="content main-title">
+              <h1>I Am a <span class="role">Front-End Developer</span></h1>
+            </div>
+            <div class="overlay"></div>
+          </div>
+
+          <div class="reveal">
+            <div class="content main-title">
+              <p>
+                About Me: Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Vivamus lacinia odio vitae vestibulum.
+              </p>
+            </div>
+            <div class="overlay"></div>
+          </div>
+
+          <div class="hire-me">
+            <button>Hire Me!</button>
+          </div>
+        </div>
+
+        <div
+          class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6 image-wrapper"
+        >
+          <div class="my-image">
+            <img src="img/patel_sneh.png" alt="Sneh Patel" />
+          </div>
+        </div>
+      </section>
+
+      <!-- this is the section for the about me  -->
+ <!-- Skills -->
+      <section class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <div class="skill-item">
+            <img src="img/icons/react-svgrepo-com.svg" alt="React" />
+            <p>React</p>
+          </div>
+          <div class="skill-item">
+            <img src="img/icons/icons8-html.svg" alt="HTML5" />
+            <p>HTML5</p>
+          </div>
+          <div class="skill-item">
+            <img src="img/icons/icons8-css.svg" alt="CSS3" />
+            <p>CSS3</p>
+          </div>
+          <div class="skill-item">
+            <img src="img/icons/icons8-js.svg" alt="JavaScript" />
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-item">
+            <img src="img/icons/php01-svgrepo-com.svg" alt="PHP" />
+            <p>PHP</p>
+          </div>
+          <div class="skill-item">
+            <img src="img/icons/node-js-svgrepo-com.svg" alt="Node.js" />
+            <p>Node.js</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+      <section class="grid-con video-player">
+        <div class="title col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+          <h2>Demo Reel</h2>
+        </div>
+
+        <div
+          class="col-span-full m-sol-span-full l-col-span-full xl-col-span-full video-player"
+        >
+          <video id="player" playsinline controls data-poster="img/intro01.jpg">
+            <source src="video/patel_sneh_demoreel.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="grid-con projects">
+        <div
+          class="col-span-full m-col-span-full l-col-span-full xl-col-span-full project-title"
+        >
+          <h2>projects</h2>
+        </div>
+
+        <a
+          href="path/to/project-detail"
+          class="col-span-full m-col-span-4 l-col-span-4 xl-col-span-4 project-card-link"
+        >
+          <div class="project-card">
+            <img
+              src="img/project-pics/image1a.png"
+              alt="Project 1"
+            />
+            <div class="overlay-content">
+              <h3>Project Title</h3>
+              <p>Short project description goes here.</p>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="path/to/project-detail"
+          class="col-span-full m-col-span-4 l-col-span-4 xl-col-span-4 project-card-link"
+        >
+          <div class="project-card">
+            <img
+              src="img/project-pics/image2a.png"
+              alt="Project 1"
+            />
+            <div class="overlay-content">
+              <h3>Project Title</h3>
+              <p>Short project description goes here.</p>
+            </div>
+          </div>
+        </a>
+        <a
+          href="path/to/project-detail"
+          class="col-span-full m-col-span-4 l-col-span-4 xl-col-span-4 project-card-link"
+        >
+          <div class="project-card">
+            <img
+              src="img/project-pics/image3a.png"
+              alt="Project 1"
+            />
+            <div class="overlay-content">
+              <h3>Project Title</h3>
+              <p>Short project description goes here.</p>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="grid-con contact" id="contact">
+        <div
+          class="col-span-full m-col-span-full l-col-span-full xl-col-span-full contact-form"
+        >
+          <section id="signUp">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+              <p>Enter Your details Here</p>
+              <div class="form-group">
+                <input type="text" id="firstname" required placeholder="" />
+                <label for="firstname">*First Name</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="lastname" required placeholder="" />
+                <label for="lastname">*Last Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" required placeholder="" />
+                <label for="email">*Email</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="comments" placeholder="" />
+                <label for="comments">*Message</label>
+              </div>
+              <input id="submit" type="submit" value="SUBMIT" />
+              <section id="feedback">
+                <p>*Please fill out all required sections</p>
+              </section>
+            </form>
+          </section>
+        </div>
+      </section>
+      </main>
+    <!-- Rest of your HTML content goes here -->
+  </body>
+</html>
   
 </body>
 </html>
+

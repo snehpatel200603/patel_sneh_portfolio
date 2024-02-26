@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as v;
+
+.skills-section {
+  text-align: center;
+  padding: 40px;
+  color:v.$color-accent; // Your theme's orange color
+
+  h2 {
+    font-family: 'Orbitron', sans-serif; // Replace with your cyberpunk-style font
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: v.$color-accent;
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px; // Set a fixed width for each skill container
+
+    img {
+      width: 80%; // Adjust based on your preference
+      height: auto;
+      margin-bottom: 10px;
+      // Base filter for increased brightness and contrast
+      filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 8px v.$color-accent);
+      animation: brokenFlicker 1.5s infinite;
+    }
+
+    p {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      color: white;
+      margin-top: 8px;
+    }
+  }
+}
+
+@keyframes brokenFlicker {
+  0%, 19%, 21%, 23%, 25%, 27%, 29%, 100% {
+    opacity: 1;
+    filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 8px v.$color-accent);
+  }
+  20%, 22%, 24%, 26%, 28% {
+    opacity: 0.6;
+    filter: brightness(0.8) contrast(1) drop-shadow(0 0 5px v.$color-accent);
+  }
+}
+
+// Responsive adjustments for tablets
+@media (min-width: 768px) {
+  .skills-section .skill-item p {
+    font-size: 1.2rem; // Slightly increase font size on tablets
+  }
+}
+
+// Responsive adjustments for desktops
+@media (min-width: 992px) {
+  .skills-section .skill-item p {
+    font-size: 1.4rem; // Increase font size for desktops
+  }
+}
+
+
+// Apply different animation durations to each skill-item to simulate randomness
+.skill-item:nth-child(1) img {
+  animation-duration: 1.7s;
+}
+
+.skill-item:nth-child(2) img {
+  animation-duration: 2.1s;
+}
+
+.skill-item:nth-child(3) img {
+  animation-duration: 1.9s;
+}
+
+.skill-item:nth-child(4) img {
+  animation-duration: 2.3s;
+}
+
+.skill-item:nth-child(5) img {
+  animation-duration: 1.6s;
+}
+
+.skill-item:nth-child(6) img {
+  animation-duration: 2s;
+}

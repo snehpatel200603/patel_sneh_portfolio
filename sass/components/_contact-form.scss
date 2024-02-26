@@ -1,0 +1,146 @@
+@use '../abstracts/variables' as v;
+
+
+#contact-form {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(51, 55, 64, 0.8); // Semi-transparent background
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px); // Apply blur effect for glass-like appearance
+  -webkit-backdrop-filter: blur(10px); // Ensure compatibility with WebKit browsers
+  border: 1px solid rgba(255, 255, 255, 0.25); // Optional: Add a border for better definition
+
+  p,
+  #feedback p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      padding: 0 0.5rem;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      color: #aaa;
+      transform-origin: left center;
+      transform: translateY(-50%) scale(1);
+      font-size: 1.5rem; // Larger font size for label
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 1rem 0.5rem;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border-bottom: 2px solid #aaa;
+      outline: none;
+      transition: border-color 0.3s, background-color 0.3s ease-in-out;
+      font-size: 1.25rem; // Larger font size for input
+
+      &::placeholder {
+        color: #aaa;
+        transition: font-size 0.3s ease-in-out;
+        font-size: 0.75rem; // Smaller font size for placeholder
+      }
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        background-color: rgba(255, 165, 0, 0.1);
+        border-bottom-color: v.$color-accent;
+
+        &::placeholder {
+          font-size: 1.25rem; // Increase font size for placeholder on focus
+        }
+      }
+
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        color: v.$color-accent;
+        transform: translateY(-125%) scale(0.65); // Move up and shrink when focused or filled
+      }
+    }
+  }
+
+  input[type="submit"] {
+    background-color: v.$color-accent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1.25rem 2.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: darken(v.$color-accent, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 165, 0, 0.5);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  #feedback {
+    p {
+      color: #e60000;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+// Responsive adjustments for tablets
+@media (min-width: 768px) {
+  #contact-form {
+    max-width: 80%;
+  }
+
+  .form-group label {
+    font-size: 1.75rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  input[type="submit"],
+  p,
+  #feedback p {
+    font-size: 1.5rem;
+  }
+}
+
+// Responsive adjustments for desktops
+@media (min-width: 992px) {
+  #contact-form {
+    max-width: 60%;
+    padding: 30px;
+  }
+
+  .form-group label {
+    font-size: 2rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  input[type="submit"],
+  p,
+  #feedback p {
+    font-size: 1.75rem;
+  }
+}

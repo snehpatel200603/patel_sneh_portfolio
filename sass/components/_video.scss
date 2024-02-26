@@ -1,22 +1,72 @@
-:root {
-  --plyr-color-main: rgb(98, 29, 224);
-  --plyr-control-icon-size: 30px;
-  --plyr-control-radius: 40px;
-  --plyr-font-family: "Helvetica Neue", sans-serif, Helvetica;
-  --plyr-control-spacing: 15px;
-}
+@use "../abstracts/variables" as v;
 
-.title h2{
+
+:root {
+    --plyr-color-main:  #ff6818;
+    --plyr-control-icon-size: 30px;
+    --plyr-control-radius: 40px;
+    --plyr-font-family: "Helvetica Neue", sans-serif, Helvetica;
+    --plyr-control-spacing: 15px;
+  }
+  
+  .title h2 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    color: white;
     align-items: center;
+    color: white;
     font-size: larger;
     font-weight: 900;
     font-family: sans-serif;
+  }
+  
+
+.video-player {
+  width: 100%; // Ensure the video player container takes full width
+  max-width: 100%; // Prevent the video player from exceeding its container width
+
+  video {
+    width: 100%; // Make the video fill the width of its container
+    height: auto; // Maintain the aspect ratio of the video
+    max-height: 500px; // Optional: limit the height of the video player
+  }
 }
 
-.video-player{
-    padding-bottom: 50px;
+// Adjustments for smaller devices to improve video player usability
+@media (max-width: #{v.$max-width-mobile}) {
+  .video-player video {
+    max-height: 300px; // Limit height on mobile devices for better fit
+  }
+  :root {
+    --plyr-control-icon-size: 20px; /* Smaller icon size for mobile */
+    --plyr-control-radius: 30px; /* Smaller radius for a more compact look */
+    --plyr-control-spacing: 10px; /* Reduced spacing for mobile */
+  }
 }
+
+// Tablet devices
+@media (min-width: #{v.$max-width-mobile + 1}) and (max-width: #{v.$max-width-tablet}) {
+  .video-player video {
+    max-height: 400px; // Slightly larger height for tablets
+  }
+  :root {
+    --plyr-control-icon-size: 25px; /* Slightly larger icon size for tablets */
+    --plyr-control-radius: 35px; /* Adjusted radius for tablets */
+    --plyr-control-spacing: 12px; /* Adjusted spacing for tablets */
+  }
+}
+
+// Desktop devices
+@media (min-width: #{v.$max-width-tablet + 1}) and (max-width: #{v.$max-width-desktop}) {
+  .video-player video {
+    max-height: 500px; // Allow more height for desktops
+  }
+}
+
+// XL Desktop devices
+@media (min-width: #{v.$max-width-desktop + 1}) {
+  .video-player video {
+    max-height: 600px; // Even more height for larger screens
+  }
+}
+
+  

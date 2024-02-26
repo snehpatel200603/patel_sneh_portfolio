@@ -1,0 +1,190 @@
+@use '../abstracts/variables' as v;
+
+.text-heading {
+  display: flex;
+  justify-content: center; // Center content on mobile
+  align-items: center; // Center content vertically on mobile
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  padding: 100px; // Padding to maintain the centering on larger screens
+
+  @media (min-width: v.$breakpoint-desktop) {
+    align-items: flex-start; // Align items to the left on desktop
+    justify-content: flex-start; // Align content to the top on desktop
+    padding-left: 100px; // Keep text to the left with padding
+    padding-top: 100px; // Padding at the top
+    text-align: left; // Text align to the left on desktop
+  }
+
+  @media (max-width: v.$breakpoint-mobile) {
+    padding: 50px 20px; // Reduced padding for mobile devices
+    text-align: center; // Text align center on mobile
+  }
+
+  @media (max-width: v.$breakpoint-tablet) {
+    h1 {
+      white-space: nowrap; // Prevent wrapping of h1 content
+      overflow: hidden; // Hide overflowed content
+      text-overflow: ellipsis; // Add ellipsis to text that overflows
+    }
+  }
+}
+
+// Mobile-first base styles for h1 and p tags with increased font sizes
+.main-title {
+  h1, p {
+    color: v.$color-primary;
+    margin: 0 0 10px; // Add some bottom margin for spacing
+  }
+
+  h1 {
+    font-size: 2rem; // Increased mobile font size
+    span{ // Specific style for "Front-End Developer" text
+      color: v.$color-accent; // Apply the orange color
+    }
+  }
+
+  p {
+    font-size: 1.25rem; // Increased mobile paragraph font size
+  }
+}
+
+// Responsive adjustments for larger screens
+@media (min-width: v.$breakpoint-tablet) {
+  .main-title {
+    h1 {
+      font-size: 2.5rem; // Adjusted tablet font size
+      max-width: 100%; // Ensure h1 does not exceed container width
+    }
+    p {
+      font-size: 1.5rem; // Adjusted tablet paragraph font size
+    }
+  }
+}
+
+@media (min-width: v.$breakpoint-desktop) {
+  .main-title {
+    h1 {
+      font-size: 3rem; // Further increased desktop font size
+    }
+    p {
+      font-size: 2rem; // Further increased desktop paragraph font size
+    }
+  }
+}
+
+
+// here is the stysing for the image 
+
+
+
+.image-wrapper {
+  display: flex;
+  justify-content: center; // Center the image horizontally
+  align-items: center; // Center the image vertically
+  margin: auto; // Center the wrapper in the parent
+}
+
+.my-image {
+  position: relative;
+  img {
+    display: block; // Remove default image inline behavior
+    width: 100%; // Adjust width as necessary, 100% for full container width
+    max-width: 100%; // Ensure image is not larger than its container
+    height: auto; // Maintain aspect ratio
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -10px; // Adjust for border size
+    left: -10px; // Adjust for border size
+    right: -10px; // Adjust for border size
+    bottom: -10px; // Adjust for border size
+    border: 2px solid v.$border-color;
+    animation: flow v.$animation-duration infinite;
+    box-shadow: 0 0 8px v.$border-color;
+    border-radius: 10px; // Optional: adds rounded corners to the border
+    z-index: -1; // Ensure the border is behind the image
+  }
+}
+
+// Animation for the flowing border effect
+@keyframes flow {
+  0%, 100% {
+    box-shadow: 0 0 8px v.$border-color;
+  }
+  50% {
+    box-shadow: 0 0 18px v.$border-color;
+  }
+}
+
+// Responsive design adjustments
+@media (max-width: v.$breakpoint-mobile) {
+  .image-wrapper {
+    flex-direction: column; // Stack image and text on top of each other
+  }
+  .my-image {
+    width: 80%; // Adjust the width of the image on mobile
+    margin-bottom: 20px; // Space between image and text
+  }
+}
+
+
+
+
+// Mobile view adjustments
+@media (max-width: v.$breakpoint-mobile) {
+  .grid-con {
+    display: flex;
+    flex-direction: column-reverse; // This will put the image above the text on mobile
+
+    // Adjust the order of the text and image
+    .text-heading {
+      order: 2; // Text below the image on mobile
+    }
+
+    .image-wrapper {
+      order: 1; // Image above the text on mobile
+    }
+  }
+}
+
+
+// button for the hire me 
+
+
+.hire-me {
+  text-align: center; // Center-align the button container
+  margin-top: 2rem; // Add some space above the button
+
+  button {
+    background-color: v.$color-accent; // Coral color, or choose one that matches your site
+    color: #fff; // White text color for contrast
+    font-size: 1.25rem; // Larger font size for readability
+    padding: 0.75rem 1.5rem; // Vertical and horizontal padding
+    border: none; // No border for a modern look
+    border-radius: 4px; // Slightly rounded corners
+    cursor: pointer; // Change mouse cursor to signify clickable
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; // Smooth transition for hover and focus effects
+    outline: none; // Remove the outline to maintain the style on focus (optional, be mindful of accessibility)
+
+    &:hover {
+      background-color: darken(#ff7f50, 10%); // Darken the button color on hover for feedback
+      transform: translateY(-3px); // Slightly raise the button on hover
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); // Add a subtle shadow for depth
+    }
+
+    &:active {
+      transform: translateY(1px); // Depress the button when clicked
+      box-shadow: none; // Remove the shadow when the button is pressed
+    }
+
+    &:focus {
+      border: 2px solid #fff; // White border for focus
+      box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); // Coral glow for visibility
+    }
+  }
+}

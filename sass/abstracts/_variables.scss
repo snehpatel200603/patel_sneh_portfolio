@@ -1,2 +1,16 @@
-@use 'fonts';
+$breakpoint-mobile: 480px; 
+$breakpoint-tablet: 729px; 
+$breakpoint-desktop: 1024px; 
+// Define maximum width variables for different devices
+$max-width-mobile: 767px; 
+$max-width-tablet: 1199px; 
+$max-width-desktop: 1919px; 
+$max-width-xl-desktop: 1920px; 
 
+// Primary and accent colors
+$color-primary: rgb(255, 255, 255); // Black color for primary text
+$color-accent: #ff6818; // Orange color for accent text
+$border-color: #FF7F50; // Coral color for the border
+
+// animations duration
+$animation-duration: 5s;
